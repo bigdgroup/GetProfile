@@ -10,7 +10,7 @@ using System.Web.Security;
 
 namespace VIS_website.Documents
 {
-    public partial class ExperienceDoc : System.Web.UI.Page
+    public partial class VisaDoc : System.Web.UI.Page
     {
         protected void Page_Load (object sender, EventArgs e)
         {

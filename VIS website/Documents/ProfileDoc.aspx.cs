@@ -10,12 +10,13 @@ using System.Web.Security;
 
 namespace VIS_website.Documents
 {
-    public partial class ExperienceDoc : System.Web.UI.Page
+    public partial class ProfileDoc : System.Web.UI.Page
     {
         protected void Page_Load (object sender, EventArgs e)
         {
 
         }
+
 
         protected void NFileUpLoad_Click (object sender, FileCollectionEventArgs e)
         {

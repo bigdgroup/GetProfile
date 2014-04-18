@@ -4,7 +4,7 @@
     <asp:Panel ID="pnlFiles" runat="server" Width="450px" HorizontalAlign="Left">
         <asp:FileUpload ID="IpFile" runat="server" />
     </asp:Panel>
-    <asp:Panel ID="pnlListBox" runat="server" Width="450px" BorderStyle="Inset" ScrollBars="Auto">
+    <asp:Panel ID="pnlListBox" runat="server" Width="448px" BorderStyle="Inset" ScrollBars="Auto">
     </asp:Panel>
     <asp:Panel ID="pnlButton" runat="server" Width="450px" HorizontalAlign="Right">
         <input id="btnAdd" onclick="javascript:Add();" style="width: 60px" type="button"

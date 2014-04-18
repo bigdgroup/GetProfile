@@ -10,24 +10,15 @@
 namespace VIS_website.Documents {
     
     
-    public partial class Profile {
+    public partial class CommentsDoc {
         
         /// <summary>
-        /// form1 control.
+        /// NFileUpLoadExperience control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// NFileUpLoad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::VIS_website.Documents.NFileUpLoad NFileUpLoad;
+        protected global::VIS_website.Documents.NFileUpLoad NFileUpLoadExperience;
     }
 }

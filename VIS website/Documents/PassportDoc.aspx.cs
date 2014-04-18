@@ -10,7 +10,7 @@ using System.Web.Security;
 
 namespace VIS_website.Documents
 {
-    public partial class ExperienceDoc : System.Web.UI.Page
+    public partial class PassportDoc : System.Web.UI.Page
     {
         protected void Page_Load (object sender, EventArgs e)
         {
@@ -19,7 +19,7 @@ namespace VIS_website.Documents
 
         protected void NFileUpLoad_Click (object sender, FileCollectionEventArgs e)
         {
-            ////var asslyType = AssemblyBuilder.GetAssembly(typeof());
+            //var asslyType = AssemblyBuilder.GetAssembly(typeof());
             //MembershipUser currentUser = Membership.GetUser();
             ////Get Username of Currently logged in user
             //string username = currentUser.UserName;

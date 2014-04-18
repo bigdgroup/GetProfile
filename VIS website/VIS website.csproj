@@ -132,9 +132,9 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="App_Data\User.mdf" />
-    <Content Include="App_Data\User_log.ldf">
-      <DependentUpon>User.mdf</DependentUpon>
+    <Content Include="App_Data\aspnet-VIS website-20140408223647.mdf" />
+    <Content Include="App_Data\aspnet-VIS website-20140408223647_log.ldf">
+      <DependentUpon>aspnet-VIS website-20140408223647.mdf</DependentUpon>
     </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -192,11 +192,12 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Documents\CommentsDoc.aspx" />
+    <Content Include="Documents\ProfileDoc.aspx" />
+    <Content Include="Documents\VisaDoc.aspx" />
+    <Content Include="Documents\PassportDoc.aspx" />
     <Content Include="Documents\ExperienceDoc.aspx" />
     <Content Include="Documents\NFileUpLoad.ascx" />
-    <Content Include="Documents\Passport.aspx" />
-    <Content Include="Documents\Profile.aspx" />
-    <Content Include="Documents\Visa.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -315,6 +316,34 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CommentsDoc.aspx.cs">
+      <DependentUpon>CommentsDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\CommentsDoc.aspx.designer.cs">
+      <DependentUpon>CommentsDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\ProfileDoc.aspx.cs">
+      <DependentUpon>ProfileDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\ProfileDoc.aspx.designer.cs">
+      <DependentUpon>ProfileDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\VisaDoc.aspx.cs">
+      <DependentUpon>VisaDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\VisaDoc.aspx.designer.cs">
+      <DependentUpon>VisaDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\PassportDoc.aspx.cs">
+      <DependentUpon>PassportDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Documents\PassportDoc.aspx.designer.cs">
+      <DependentUpon>PassportDoc.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Documents\ExperienceDoc.aspx.cs">
       <DependentUpon>ExperienceDoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -329,30 +358,10 @@
     <Compile Include="Documents\NFileUpLoad.ascx.designer.cs">
       <DependentUpon>NFileUpLoad.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Documents\Passport.aspx.cs">
-      <DependentUpon>Passport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Documents\Passport.aspx.designer.cs">
-      <DependentUpon>Passport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Documents\Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\Visa.aspx.cs">
-      <DependentUpon>Visa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Documents\Visa.aspx.designer.cs">
-      <DependentUpon>Visa.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\ConfigurationHelp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

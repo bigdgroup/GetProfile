@@ -63,11 +63,11 @@
                 </section>
                 <nav>
                     <ul id="menu">
-                        <li><a runat="server" href="~/Documents/Profile">Profile</a></li>
-                        <li><a runat="server" href="~/Documents/Visa">Visa</a></li>
-                        <li><a runat="server" href="~/Documents/Passport">Passport</a></li>
-                        <li><a runat="server" href="~/Documents/Experience">Experience</a></li>
-                        <li><a runat="server" href="~/Documents/Comments">Comments</a></li>
+                        <li><a runat="server" href="~/Documents/ProfileDoc">Profile</a></li>
+                        <li><a runat="server" href="~/Documents/VisaDoc">Visa</a></li>
+                        <li><a runat="server" href="~/Documents/PassportDoc">Passport</a></li>
+                        <li><a runat="server" href="~/Documents/ExperienceDoc">Experience</a></li>
+                        <li><a runat="server" href="~/Documents/CommentsDoc">Comments</a></li>
                        <%-- <li><a runat="server" href="~/Account/Login">Login</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>--%>
                     </ul>
