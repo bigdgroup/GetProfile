@@ -10,7 +10,7 @@
 namespace VIS_website.Documents {
     
     
-    public partial class ExperienceDoc {
+    public partial class PassportDoc {
         
         /// <summary>
         /// NFileUpLoadExperience control.
@@ -19,6 +19,6 @@ namespace VIS_website.Documents {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::VIS_website.Documents.NFileUpLoad NFileUpLoadExperience;
+        protected global::VIS_website.Documents.NFileUpLoad NFileUpLoadPassport;
     }
 }

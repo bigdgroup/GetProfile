@@ -52,7 +52,6 @@ namespace VIS_website.Documents
         private string GetFileSavePath (string param)
         {
             return  System.Web.Configuration.WebConfigurationManager.AppSettings["FileSavePath"] + param;
-            //return  "C:\\Users\\Sam\\Documents\\Visual Studio 2012\\Projects\\MultifileUploadUserContro\\Files" + "\\" ;
         }
     }
 }

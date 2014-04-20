@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Web.Security;
+using a=VIS_website.Helper;
 //using System.Reflection.Emit;
 
 namespace VIS_website.Documents
@@ -16,6 +17,7 @@ namespace VIS_website.Documents
         {
 
         }
+
 
         protected void NFileUpLoad_Click (object sender, FileCollectionEventArgs e)
         {
@@ -30,6 +32,11 @@ namespace VIS_website.Documents
             var usr = Page.User.Identity.Name;
             if (e.HasFiles)
             {
+                if (e.TotalSize > 1024D)
+               {
+                    
+                    return;
+                }
                 for (int n = 0; n < e.Count; n++)
                 {
                     oHttpPostedFile = oHttpFileCollection[n];
@@ -51,8 +58,7 @@ namespace VIS_website.Documents
 
         private string GetFileSavePath (string param)
         {
-            return  System.Web.Configuration.WebConfigurationManager.AppSettings["FileSavePath"] + param;
-            //return  "C:\\Users\\Sam\\Documents\\Visual Studio 2012\\Projects\\MultifileUploadUserContro\\Files" + "\\" ;
+            return System.Web.Configuration.WebConfigurationManager.AppSettings["FileSavePath"] + param;
         }
     }
 }

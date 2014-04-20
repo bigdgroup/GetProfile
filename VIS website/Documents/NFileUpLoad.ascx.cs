@@ -11,6 +11,8 @@ namespace VIS_website.Documents
     {
 
         public event NFileUploadClick Click;
+        //Delegate that represents the Click event signature for MultipleFileUpload control.
+        public delegate void NFileUploadClick (object sender, FileCollectionEventArgs e);
 
         private int _Rows = 6;
         public int Rows
@@ -42,7 +44,7 @@ namespace VIS_website.Documents
         {
             var JavaScript = new System.Text.StringBuilder();
 
-            JavaScript.Append("<script type='text/javascript'>");
+            JavaScript.Append("<script type='text/javascript'>\n");
             JavaScript.Append("var Id = 0;\n");
             JavaScript.AppendFormat("var MAX = {0};\n", _UpperLimit);
             JavaScript.AppendFormat("var DivFiles = document.getElementById('{0}');\n", pnlFiles.ClientID);
@@ -53,7 +55,6 @@ namespace VIS_website.Documents
             JavaScript.Append("var IpFile = GetTopFile();\n");
             JavaScript.Append("if(IpFile == null || IpFile.value == null || IpFile.value.length == 0)\n");
             JavaScript.Append("{\n");
-            JavaScript.Append("alert('Please select a file to add.');\n");
             JavaScript.Append("return;\n");
             JavaScript.Append("}\n");
             JavaScript.Append("var NewIpFile = CreateFile();\n");
@@ -132,6 +133,9 @@ namespace VIS_website.Documents
             JavaScript.Append("for(var n = 0; n < Inputs.length && Inputs[n].type == 'file'; ++n)\n");
             JavaScript.Append("{\n");
             JavaScript.Append("IpFile = Inputs[n];\n");
+            JavaScript.Append("if(!checkFileSizeAndExtension(IpFile))\n");
+            JavaScript.Append("return;\n");
+            JavaScript.Append("alert(IpFile.files[0].size/1048576);\n");
             JavaScript.Append("break;\n");
             JavaScript.Append("}\n");
             JavaScript.Append("return IpFile;\n");
@@ -158,6 +162,20 @@ namespace VIS_website.Documents
             JavaScript.Append("}\n");
             JavaScript.Append("GetTopFile().disabled = true;\n");
             JavaScript.Append("return true;\n");
+            JavaScript.Append("}\n");
+            JavaScript.Append("function checkFileSizeAndExtension(strFile)\n");
+            JavaScript.Append("{\n");
+            JavaScript.Append("var valid = false;\n");
+            JavaScript.Append("var sFileExtension = strFile.files[0].name.split('.')[strFile.files[0].name.split('.').length-1].toLowerCase();\n");
+            JavaScript.Append("var iFileSize = strFile.files[0].size;\n");
+            JavaScript.Append("var iConvert = (iFileSize/1024576).toFixed(2);\n");
+            JavaScript.Append("if (!(sFileExtension == 'pdf') || !(sFileExtension == 'doc') ||!(sFileExtension == 'docx') ||!(sFileExtension == 'rtf') || (iFileSize > 10485760))\n");
+            JavaScript.Append("{\n");
+            JavaScript.Append("var txt = 'File type : ' + sFileExtension + \n 'Size: ' + iConvert + 'MB' \n + 'Please make sure your file(s) is/are either of pdf, doc, docx, or rtf format and less than 10 MB.';\n");
+            JavaScript.Append("alert(txt);\n");
+            JavaScript.Append("return valid;\n");
+            JavaScript.Append("}\n");
+            JavaScript.Append("valid = true;\n");
             JavaScript.Append("}\n");
             JavaScript.Append("</script>");
 
@@ -215,6 +233,5 @@ namespace VIS_website.Documents
         }
     }
 
-    //Delegate that represents the Click event signature for MultipleFileUpload control.
-    public delegate void NFileUploadClick (object sender, FileCollectionEventArgs e);
+    
 }

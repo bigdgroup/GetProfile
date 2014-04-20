@@ -20,5 +20,10 @@ namespace VIS_website.Account
                 RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
             }
         }
+
+        protected void Unnamed6_Click (object sender, EventArgs e)
+        {
+
+        }
     }
 }
